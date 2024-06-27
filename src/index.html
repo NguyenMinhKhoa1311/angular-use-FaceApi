@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Điểm danh</title>
+  <script defer src="assets/face-api.min.js"></script>
+  <script defer src="assets/scripts.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="assets/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+
+<body>
+  <div id="container-atten">
+    <!-- Column 1: Content Wrapper -->
+    <div class="content-wrapper">
+      <app-statistical-attendance></app-statistical-attendance>
+
+    </div>
+
+    <!-- Column 2: Header, Start/Stop Buttons, and Camera -->
+    <div class="header-control">
+      <header class="header">
+        <h1>ATTENDANCE SYSTEM</h1>
+      </header>
+      <main class="main-content">
+        <div class="camera" id="cameraDiv">
+          <video id="video" width="600" height="450" autoplay></video>
+        </div>
+        <div class="control" id="controlDiv">
+          <button onclick="startWebcam()" class="button">Bắt đầu</button>
+          <button onclick="stopWebcam()" class="button">Kết thúc</button>
+        </div>
+      </main>
+    </div>
+
+    <!-- Column 3: Date and Dropdowns -->
+    <div class="date-dropdown">
+      <app-list-attendance></app-list-attendance>
+
+    </div>
+  </div>
+  <footer class="footer">
+    <p>&copy; NguyễnKhoa - PhùngKhoa - HoàngDuy - PhúcHậu</p>
+  </footer>
+</body>
+
+</html>
